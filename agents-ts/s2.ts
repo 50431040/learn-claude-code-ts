@@ -113,7 +113,7 @@ async function agentLoop(messages: Array<MessageParam>) {
     const response = await anthropic.messages.create({
       model: process.env.MODEL_ID,
       max_tokens: 10000,
-      system: `You are a coding agent at ${process.cwd()}. Use bash to solve tasks. Act, don't explain.`,
+      system: `You are a coding agent at ${process.cwd()}. Use tools to solve tasks. Act, don't explain.`,
       messages: messages,
       tools,
     });
