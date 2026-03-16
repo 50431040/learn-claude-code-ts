@@ -163,7 +163,7 @@ function ask() {
     input: process.stdin,
     output: process.stdout,
   });
-  rl.question("s1> ", async (input) => {
+  rl.question("s2> ", async (input) => {
     messages.push({ role: "user", content: input });
     await agentLoop(messages);
     rl.close();
